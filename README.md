@@ -57,5 +57,7 @@ Your `#count_sentences` method should use the `self` keyword to refer to the str
 Think about the steps you need to go through to enact the desired behavior:
 
 * [`split`](http://ruby-doc.org/core-2.2.0/String.html#method-i-split) the string on any and all periods, question marks and exclamation marks. 
+  * Hint 1: use your knowledge of **regex** to split at punctuation
+  * Hint 2: for complex sentences, think about how you could use the `delete_if` method.
 * [`count`](http://ruby-doc.org/core-2.2.0/Array.html#method-i-count) the number of elements that results from that `split`. 
 * Remember to consider edge cases such as the following sentence: `"This, well, is a sentence. This is too!! And so is this, I think? Woo..."`. What would happen if we split this sentence on the punctuation characters? We would end up with an array that contains empty strings as well as strings containing sentences. How would you eliminate empty strings from an array? We recommend placing `require 'pry'` on the top of the file and placing a `binding.pry` inside of the `#count_sentences` method to help you get this test passing. 
